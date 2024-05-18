@@ -1,6 +1,5 @@
 name: workflow
 
-
 on:
   push:
     branches:
@@ -80,7 +79,7 @@ jobs:
 
       - name: Login to Amazon ECR
         id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@v1
       
       
       - name: Pull latest images
@@ -89,7 +88,7 @@ jobs:
          
       # - name: Stop and remove  container if running
       #   run: |
-      #    docker ps -q --filter "name=mltest" | grep -q . && docker stop mltest && docker rm -fv mltest
+         # docker ps -q --filter "name=mltest" | grep -q . && docker stop mltest && docker rm -fv mltest
        
       - name: Run Docker Image to serve users
         run: |
