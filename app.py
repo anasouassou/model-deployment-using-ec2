@@ -4,7 +4,6 @@ import pandas as pd
 import joblib
 import random
 
-
 from flask import Flask, request, render_template
 import joblib
 import pandas as pd
