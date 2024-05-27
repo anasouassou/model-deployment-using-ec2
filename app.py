@@ -9,6 +9,8 @@ import joblib
 import pandas as pd
 
 
+
+
 # Initialize the Flask application
 application = Flask(__name__)
 app = application
